@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/main.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1> What stock's price would you like to know?</h1>
+    <form action="/submit" method="POST">
+        <label for="stock"></label>
+        <input type="text" name="stock" placeholder="NVDA">
+        <input type="submit" value="Submit">
+        </label>
+    </form>
+    <% if (locals.image) {%>
+        <div class="card">
+            <div class="logo">
+                <img src="<%= image %>"> </img>
+            </div>
+            <div class="info">
+                <div class="headers">
+                    <div class="title">
+                        <h3><%= name %></h3>
+                        <p><%= ticker %></p>
+                    </div>
+                <h3>$<%= price %></h3>
+                <h3><%= change %>%</h3>
+            </div>
+            <div class="description">
+                <p> <%= description %></p>
+            </div>
+      </div>
+    </div>  
+    <% } %>
+</body>
+</html>
