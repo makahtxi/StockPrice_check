@@ -43,6 +43,7 @@ justify-items: center;
     justify-content: center;
     align-items: center;
     margin-bottom: 12px;
+    background-color: #232526;
 }
 img{
     width: 200px;
@@ -72,9 +73,7 @@ img{
     display: flex;
     justify-content: end;
     align-items: center;
-    border-top: 1px black solid;
-
-    
+    border-top: 1px black solid;    
 }
 
 .description{
