@@ -9,57 +9,99 @@ body {
     align-items: center;
 }
 
-
+.title {
+    font-family: "Inter", sans-serif;
+    color: white
+}
 .card{
-    margin-top: 4rem;
- background-color: black;
- display: grid;
- grid-template-columns: 1fr 2fr;
- width: 700px;
- height: fit-content
+margin-top: 4rem;
+ background-color: #B07457;
+ display: flex;
+ flex-direction: column;
+ gap: 0px;
+ height: 430px;
+ width: 295px;
  align-items: center;
 justify-items: center;
- padding-left: 30px;
- padding-right: 30px;
+ box-shadow:0px 0px 0px 9.5px #45434E inset;
 }
 
+.market{
+    height: 25px;
+    font-size: 12px;
+    width: 232px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
 .logo {
- padding: 15px;
- display: flex;
- align-items: center;
- justify-content: center;
+    background-color: white;
+    width:232px;
+    height: 232px;
+    box-shadow:0px 0px 0px 5px #45434E inset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 12px;
 }
 img{
     width: 200px;
     height: 200px;
 }
-.info {
+.card-text{
+    width: 242px;
+    height: 80px;
+    background-color: #CFAE9B;
     display: grid;
-    grid-template-rows: 1fr 4fr;
-    color: white;
-    height: fit-content;
-    align-items: center;
+    grid-template-rows: 18px 44px 18px;
+    border: 3px #9A6135 solid;
+    padding: 2px;
+
 }
 
-.headers {
-    display:flex;
-    justify-content: space-between;
+.type{
+    font-size: 13px;
+    margin:0;
+    padding:0;
+}
+
+.stats{
+    font-size: 10px;
+    margin:0;
+    padding:0;
+    display: flex;
+    justify-content: end;
     align-items: center;
+    border-top: 1px black solid;
+
+    
 }
 
 .description{
-    font-size: 10px;
-    height:fit-content;
+    font-size:10px;
+    margin:0;
+    padding:0;
 }
 
-.title{
-    margin:0
-    display:flex;
-    flex-direction: column;
-    justify-content: start;
+.card-name{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: end;
+    width: 233px;
+    padding-left: 11px;
+    padding-right: 11px;
+    background-color: #B57E64;
+    margin-top: 15px;
+    height: 35px;
+    font-size: 13px
 }
 
-.title h3,
-.title p {
+.card-name h3,
+.card-name p {
     margin:0
+}
+
+p{
+    margin: 0;
 }

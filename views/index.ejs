@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/main.css">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <title>Stock Checker</title>
 </head>
 <body>
-    <h1> What stock's price would you like to know?</h1>
+    <h1 class="title"> What stock's price would you like to know?</h1>
     <form action="/submit" method="POST">
         <label for="stock"></label>
         <input type="text" name="stock" placeholder="NVDA">
@@ -16,21 +19,27 @@
     </form>
     <% if (locals.image) {%>
         <div class="card">
+            <div class="card-name">
+                <h3><%= name %></h3>
+                <p><%= ticker %></p>
+            </div>
+            <div class="market">
+                <p>Market Cap: $<%= mktCap %></p>
+            </div>
             <div class="logo">
                 <img src="<%= image %>"> </img>
             </div>
-            <div class="info">
-                <div class="headers">
-                    <div class="title">
-                        <h3><%= name %></h3>
-                        <p><%= ticker %></p>
-                    </div>
-                <h3>$<%= price %></h3>
-                <h3><%= change %>%</h3>
-            </div>
-            <div class="description">
-                <p> <%= description %></p>
-            </div>
+            <div class="card-text">
+                <h3 class="type">
+                    [ <%= sector %> ]
+                </h3>
+                <div class="description">
+                    <p> <%= description %></p>
+                </div>
+                <div class="stats">
+                    <h3>    PRICE/ $<%= price %> CHANGE/ <%= change %>%</h3>
+                    
+            </div> 
       </div>
     </div>  
     <% } %>
